@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: cadetblue;
+}
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .msg{
+        position:absolute;
+    }
+    .showMsg{
+        position: absolute;
+        z-index: 1;
+        font-size: 10vmin;
+        color: rgb(68, 42, 23);
+        transition: all 0.3s;
+    }
+}
+.gameName{
+    position:absolute;
+    font-size: 5vmin;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    bottom: 87%;
+    color: rgb(253, 191, 75);
+    animation: anima 1s ease-in-out infinite alternate;
+    
+}
+@keyframes anima {
+    from {
+        transform: scale(1);
+    }        
+    to {
+        transform: scale(1.03);
+    }
+}
+.gameBody{
+    width: 50vmin;;
+    height: 50vmin;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.253);
+    margin-bottom: 5vmin;
+      
+    .box{
+        width: 15vmin;
+        height: 15vmin;
+        border: none;
+        border-radius: 10px;
+        font-size: large;
+        background-color: rgb(0, 255, 170);
+        box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.384);
+        transition: all 0.3s;
+        font-weight: bold;
+
+    }
+    .oColor{
+        color:rgb(253, 191, 75);
+    }
+    .box:hover{
+        transform: scale(1.01);
+    }
+}
+.opacity{
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+.resetBtn{
+    position: relative;
+    width: 8vw;
+    height: 5vh;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.resetBtn::after{
+    z-index: -1;
+    content: '';
+    position:absolute;
+    width: 0vw;
+    height: 5vh;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(199, 68, 16);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.resetBtn:hover::after{
+    width: 8vw;
+}
+/* .resetBtn:hover{
+    background-color: ;
+} */
