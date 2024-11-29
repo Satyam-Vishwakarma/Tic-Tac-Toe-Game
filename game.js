@@ -32,6 +32,7 @@ boxes.forEach((box) => { // 'forEach' function for array(here boxes are array)
     })
 });
 const checkWinner =()=>{
+    let winnerFound=false;
     winnerIf.forEach((rule)=>{
         let position1=boxes[rule[0]].innerText;
         let position2=boxes[rule[1]].innerText;
@@ -40,14 +41,15 @@ const checkWinner =()=>{
         if(position1===position2 && position2===position3){
             printWinner(position1); // for print winner
             disabledBtn(); // for the disabled the rest of boxs after result reclaration
+            winnerFound=true;
         }
        }
-       else if(count===9){
+    })
+    if(winnerFound===false && count===9){
         msg.innerText= 'Match droaw';
         msg.classList.add('showMsg');
         gameBody.classList.add('opacity');
-       }
-    })
+    }
 }
 const printWinner=(position1)=>{
     msg.innerText= 'Congratulation, winner is '+position1;
@@ -66,6 +68,6 @@ resetBtn.addEventListener("click",()=>{
     })
     msg.innerText= null
         msg.classList.remove('showMsg');
-        count=null
+        count=0;
         gameBody.classList.remove('opacity');
 })

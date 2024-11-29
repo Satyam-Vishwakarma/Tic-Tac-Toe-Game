@@ -22,7 +22,7 @@ main{
         position: absolute;
         z-index: 1;
         font-size: 7vmin;
-        color: rgba(217, 255, 47, 0.829);
+        color: rgba(255, 30, 0, 0.829);
         transition: all 0.3s;
     }
 }
