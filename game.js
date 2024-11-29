@@ -42,7 +42,7 @@ const checkWinner =()=>{
             disabledBtn(); // for the disabled the rest of boxs after result reclaration
         }
        }
-       if(count===9){
+       else if(count===9){
         msg.innerText= 'Match droaw';
         msg.classList.add('showMsg');
         gameBody.classList.add('opacity');
