@@ -42,6 +42,9 @@ const checkWinner =()=>{
             printWinner(position1); // for print winner
             disabledBtn(); // for the disabled the rest of boxs after result reclaration
             winnerFound=true;
+            boxes[rule[0]].classList.add("boxclr");
+            boxes[rule[1]].classList.add("boxclr");
+            boxes[rule[2]].classList.add("boxclr");
         }
        }
     })
@@ -65,6 +68,9 @@ resetBtn.addEventListener("click",()=>{
     boxes.forEach((box)=>{
         box.innerText=null
         box.disabled=false;
+        box.classList.remove("boxclr");
+        box.classList.remove("boxclr");
+        box.classList.remove("boxclr");
     })
     msg.innerText= null
         msg.classList.remove('showMsg');

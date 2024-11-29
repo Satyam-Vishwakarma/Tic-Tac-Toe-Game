@@ -64,6 +64,10 @@ main{
         font-size: 10vmin;
         font-weight: bold;
     }
+    .boxclr{
+        background-color: red;
+        transition: all 0.3s;
+    }
     .oColor{
         color:rgb(180, 136, 54);
     }
