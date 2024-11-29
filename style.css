@@ -4,7 +4,7 @@
 }
 body{
     background-color: cadetblue;
-    background-image: url(/Image/bg1.jfif);
+    background-image: url(./Image/bg1.jfif);
     backdrop-filter:blur(4px);
     background-size: cover;
     background-repeat: no-repeat;
