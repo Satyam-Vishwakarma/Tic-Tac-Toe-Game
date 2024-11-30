@@ -60,7 +60,9 @@ main{
         height: 20vmin;
         border: none;
         border-radius: 5px;
-        background-color: rgba(0, 255, 170);
+        background-image: url(./Image/MuchaTseBle.jfif);
+        background-repeat: no-repeat;
+        background-size: cover;
         box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.171);
         box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.466);
         transition: all 0.3s;
@@ -80,7 +82,7 @@ main{
         border-bottom-right-radius: 20px;
     }
     .boxclr{
-        background-color: red;
+        border: 5px solid rgb(255, 0, 0);
         transition: all 0.3s;
     }
     .oColor{
@@ -93,6 +95,9 @@ main{
 .opacity{
     opacity: 0.5;
     transition: all 0.3s;
+}
+.clr{
+    color: aquamarine;
 }
 .resetBtn{
     position: relative;

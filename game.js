@@ -21,10 +21,13 @@ boxes.forEach((box) => { // 'forEach' function for array(here boxes are array)
             box.innerText="O"
             valueO=false;
             box.classList.add("oColor")
+            box.classList.remove("clr")
         }
         else{
             box.innerText="X"
             valueO=true;
+            // box.classList.add("oColor")
+            box.classList.add("clr")
             box.classList.remove("oColor")
         }
         box.disabled=true; // disabled the button emmediate after click once
@@ -73,7 +76,8 @@ resetBtn.addEventListener("click",()=>{
         box.classList.remove("boxclr");
     })
     msg.innerText= null
-        msg.classList.remove('showMsg');
-        count=0;
-        gameBody.classList.remove('opacity');
+    msg.classList.remove('showMsg');
+    count=0;
+    gameBody.classList.remove('opacity');
+    valueO=true;
 })
