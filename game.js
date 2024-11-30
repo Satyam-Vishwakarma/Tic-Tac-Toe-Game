@@ -49,7 +49,7 @@ const checkWinner =()=>{
        }
     })
     if(winnerFound===false && count===9){
-        msg.innerText= 'Match droaw';
+        msg.innerText= 'Match draw';
         msg.classList.add('showMsg');
         gameBody.classList.add('opacity');
     }
