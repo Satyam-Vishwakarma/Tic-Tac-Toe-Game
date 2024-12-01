@@ -2,6 +2,8 @@ let boxes=document.querySelectorAll(".box"); //select all boxes whose class 'box
 let msg=document.querySelector(".msg");
 let resetBtn=document.querySelector(".resetBtn");
 let gameBody=document.querySelector(".gameBody");
+let CountForO=document.querySelector("#CountForO");
+let CountForX=document.querySelector("#CountForX");
 let valueO=true;
 const winnerIf=[
     [0, 1, 2],
@@ -14,6 +16,8 @@ const winnerIf=[
     [6, 7, 8]
 ]
 let count=0;
+let winCountO=0;
+let winCountX=0;
 boxes.forEach((box) => { // 'forEach' function for array(here boxes are array)
     box.addEventListener("click", ()=>{
         count=count+1;
@@ -48,6 +52,14 @@ const checkWinner =()=>{
             boxes[rule[0]].classList.add("boxclr");
             boxes[rule[1]].classList.add("boxclr");
             boxes[rule[2]].classList.add("boxclr");
+            if(position1==="O"){
+                let oCount=winCountO+=1;
+                CountForO.innerText=oCount;
+            }
+            else{
+                let xCount=winCountX+=1;
+                CountForX.innerText=xCount;
+            }
         }
        }
     })
